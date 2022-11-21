@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: #111;
+    overflow: hidden;
+}
+
+.salute {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.saluteTextContainer {
+    flex: 3;
+
+}
+
+.saluteText {
+    font-size: 60vw;
+    color: #333;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+.saluteImgContainer {
+    flex: 1;
+}
+
+.saluteImg {
+    width: 100%;
+}
+
+
+
+.nameContainer{
+    height: 100vh;
+    background-color: blue;
+}
+
+.name{
+    font-size: 18vw;
+    color: #333;
+    font-weight: bolder; 
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+}
+
+
+.jobTitleContainer{
+height: 100vh;
+}
+
+.dark{
+    background: url("./img/bg1.png");
+}
+
+.purple{
+    background: rebeccapurple url("./img/bg2.png");
+}
+
+.jobTitle{
+    font-size: 10vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+    font-weight: bolder;
+}
+
+
+.projectsContainer{
+display: flex;
+flex-direction: column;
+gap: 100px;
+padding: 0px 100px;
+}
+
+.projectsTitle{
+    color: #333;
+    font-size: 10vw;
+    font-weight: bolder;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.phone{
+    flex: 1;
+    height: 600px;
+    width: 300px;
+    position: relative;
+}
+.screen{
+    height: 567px;
+    width: 264px;
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    border-radius: 28px;
+    overflow: scroll;
+    background-color: aqua;
+
+}
+
+.screen::-webkit-scrollbar{
+    display: none;
+}
+.phoneApp{
+    width: 100%;
+}
+
+.projectDetail{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+}
+
+
+.projectTitle{
+    font-size: 7vw;
+    color: #555;
+
+}
+
+
+.projectDesc{
+font-size: 20px;
+color: #555;
+text-align: justify;
+line-height: 40px;
+
+}
+
+.projectButton{
+padding: 10px 20px;
+background-color: transparent;
+border: 2px solid #555;
+color:#555;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+
+
+.projectButton::after{
+    content: "View Demo";
+    padding: 10px 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: aqua;
+    top: 0;
+    left: -100%;
+    transition: 1s all;
+    font-family: bold;
+
+}
+
+.projectButton:hover.projectButton::after{
+    transform: translateX(100%);
+}
+
+.laptop{
+    flex: 1;
+    width: 600px;
+    height: 379px;
+    flex:1;
+    position: relative;
+}
+
+.laptopScreen{
+    width:451px;
+    height:283px;
+    position: absolute;
+    top:18px;
+    left: 68px;
+    overflow: scroll;
+    background-color: aqua;
+}
+
+.laptopScreen::-webkit-scrollbar{
+    display: none;
+}
+
+.laptopApp{
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+
+    .project{
+        flex-direction: column;
+    }
+
+    .project:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .phone,.laptop{
+        transform: none !important;
+    }
+    
+}
